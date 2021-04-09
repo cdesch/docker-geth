@@ -13,9 +13,10 @@ async function main() {
 //   const counter = await hre.ethers.contractFactory.attach("0x5FbDB2315678afecb367f032d93F642f64180aa3");
 
 const accountAddress = "0x15d34aaf54267db7d7c367839aaf71a00a2c6a65";
+const senderAddress = "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266";
 const senderPrivateKey = "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80";
 
-// const accountAddress = "0x99Af8f2bd1574A687e8695fF069f4554AE6dA6dc";
+
 // const senderPrivateKey = "0x348f40e0b3c3d55b626ec085c115fc25578a10a76b9afcd27d4c48094d707348";
 
 const provider = new ethers.providers.JsonRpcProvider("http://127.0.0.1:8545");
@@ -23,8 +24,12 @@ const blocknumber = await provider.getBlockNumber();
 console.log("blocknumber", blocknumber.toString());
 
 const wallet = new ethers.Wallet(senderPrivateKey, provider);
+
+const sender_balance = await provider.getBalance(senderAddress);
+console.log("sender balance", sender_balance.toString());
+
 const account_balance = await provider.getBalance(accountAddress);
-console.log("account_balance", account_balance.toString());
+console.log("receiver balance", account_balance.toString());
 
 const gasPrice = await provider.getGasPrice();
 tx = {
