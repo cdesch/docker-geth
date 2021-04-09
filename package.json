@@ -1,0 +1,14 @@
+{
+  "name": "docker-geth",
+  "version": "1.0.0",
+  "description": "create directory",
+  "main": "index.js",
+  "scripts": {
+    "network-test": "node src/network-tester.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "web3": "^1.3.5"
+  }
+}
