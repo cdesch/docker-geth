@@ -1,0 +1,29 @@
+version: "3"  # optional since v1.27.0
+
+
+# networks:
+#   eth-net: 
+#     ipam:
+#         driver: default
+#         config:
+#             - subnet: 172.28.0.0/16      
+    
+services:
+
+
+  node1:
+    hostname: node_1
+    image: ethereum/client-go
+    command: --datadir /root/data --nodiscover --port 30303 --http --http.addr "0.0.0.0" 
+      --miner.gasprice 0
+      --http.port 8545 --http.api db,eth,net,web3,admin,personal,miner,signer:insecure_unlock_protect  --networkid
+      607227 --unlock 0x5240834dc33a997def6f2487159a572905a779fe --password /root/files/password --mine --allow-insecure-unlock 
+      --miner.etherbase=0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+      --miner.threads=2
+
+    ports:
+    - 30303:30303
+    - 8545:8545
+    volumes:
+    - ./data/password.sec:/root/files/password:ro
+    - ./data/node1:/root/data:rw

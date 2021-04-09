@@ -41,8 +41,8 @@ await wallet.sendTransaction(tx).then((signedTX)=>{
 
 const account_balance2 = await provider.getBalance(accountAddress);
 
-// console.log("account_balance after:", ethers.utils.formatUnits(account_balance2.toString()));
-console.log("account_balance after:", account_balance2.toString());
+console.log("account_balance after:", ethers.utils.formatUnits(account_balance2.toString()));
+// console.log("account_balance after:", account_balance2.toString());
 //   console.log("Counter Address:", counte.address)
 //   const counter = await Counter.deploy();
 
