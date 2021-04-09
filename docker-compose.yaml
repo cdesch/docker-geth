@@ -19,13 +19,9 @@ services:
       --http.port 8545 --http.api eth,net,web3,admin,personal,miner --networkid
       607227 --unlock 0x5240834dc33a997def6f2487159a572905a779fe --password /root/files/password --mine --allow-insecure-unlock 
       --miner.threads=2
-      
-      
-# --miner.etherbase=0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
     ports:
     - 30303:30303
     - 8545:8545
     volumes:
     - ./data/password.sec:/root/files/password:ro
     - ./data/node1:/root/data:rw
-    - ./checker.js:/root/checker.js:ro
