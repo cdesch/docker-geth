@@ -18,7 +18,7 @@ geth attach data/node1/geth.ipc --exec admin.peers
 
 
 docker run -it -p 30303:30303 -v /path/on/host:/root/.ethereum ethereum/client-go
-
+docker run --rm -it -v $(pwd)/data/node1:/root/data -v $(pwd)/genesis.json:/root/files/genesis.json ethereum/client-go:alltools-latest geth init --datadir /root/data /root/files/genesis.json
 
 ## Testers
 yarn network-test

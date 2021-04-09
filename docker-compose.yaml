@@ -10,8 +10,19 @@ version: "3"  # optional since v1.27.0
     
 services:
 
-
+  gethcli:
+    container_name: gethcli
+    hostname: gethcli
+    image: ethereum/client-go:alltools-latest
+    command: tail -F anything    
+    stdin_open: true
+    tty: true
+    # networks:
+    #   eth-net:
+    #     ipv4_address: 172.28.1.10     
   node1:
+
+    
     hostname: node_1
     image: ethereum/client-go
     command: --datadir /root/data --nodiscover --port 30303 --http --http.addr "0.0.0.0" 
