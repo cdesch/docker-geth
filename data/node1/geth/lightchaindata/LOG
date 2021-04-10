@@ -1,0 +1,108 @@
+=============== Apr 10, 2021 (UTC) ===============
+21:49:20.351110 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+21:49:20.366658 db@open opening
+21:49:20.371784 version@stat F·[] S·0B[] Sc·[]
+21:49:20.380043 db@janitor F·2 G·0
+21:49:20.381116 db@open done T·13.675ms
+21:49:20.400889 db@close closing
+21:49:20.402104 db@close done T·1.2097ms
+=============== Apr 10, 2021 (UTC) ===============
+21:49:22.031012 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+21:49:22.040624 version@stat F·[] S·0B[] Sc·[]
+21:49:22.042447 db@open opening
+21:49:22.043680 journal@recovery F·1
+21:49:22.044606 journal@recovery recovering @1
+21:49:22.067941 memdb@flush created L0@2 N·631 S·51KiB "\x02d\xfc..\x19Ba,v436":"\xfe\x88\xcf..H\xef\xcc,v369"
+21:49:22.072179 version@stat F·[1] S·51KiB[51KiB] Sc·[0.25]
+21:49:22.090179 db@janitor F·3 G·0
+21:49:22.091202 db@open done T·48.0288ms
+21:49:22.109156 db@close closing
+21:49:22.110167 db@close done T·1.0064ms
+=============== Apr 10, 2021 (UTC) ===============
+21:49:34.539147 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+21:49:34.546486 version@stat F·[1] S·51KiB[51KiB] Sc·[0.25]
+21:49:34.547444 db@open opening
+21:49:34.548453 journal@recovery F·1
+21:49:34.549476 journal@recovery recovering @3
+21:49:34.558919 memdb@flush created L0@5 N·1 S·398B "eth..э\x92,v633":"eth..э\x92,v633"
+21:49:34.561540 version@stat F·[2] S·51KiB[51KiB] Sc·[0.50]
+21:49:34.577914 db@janitor F·4 G·0
+21:49:34.578618 db@open done T·30.4652ms
+21:49:34.597799 db@close closing
+21:49:34.598609 db@close done T·807.1µs
+=============== Apr 10, 2021 (UTC) ===============
+21:50:01.478055 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+21:50:01.486295 version@stat F·[2] S·51KiB[51KiB] Sc·[0.50]
+21:50:01.487352 db@open opening
+21:50:01.488464 journal@recovery F·1
+21:50:01.490328 journal@recovery recovering @6
+21:50:01.501198 memdb@flush created L0@8 N·1 S·398B "eth..э\x92,v635":"eth..э\x92,v635"
+21:50:01.505518 version@stat F·[3] S·52KiB[52KiB] Sc·[0.75]
+21:50:01.521495 db@janitor F·5 G·0
+21:50:01.522391 db@open done T·34.1803ms
+21:50:01.558479 db@close closing
+21:50:01.559742 db@close done T·1.2653ms
+=============== Apr 10, 2021 (UTC) ===============
+21:51:29.804368 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+21:51:29.811312 version@stat F·[3] S·52KiB[52KiB] Sc·[0.75]
+21:51:29.811971 db@open opening
+21:51:29.812704 journal@recovery F·1
+21:51:29.814699 journal@recovery recovering @9
+21:51:29.825623 memdb@flush created L0@11 N·1 S·398B "eth..э\x92,v637":"eth..э\x92,v637"
+21:51:29.833389 version@stat F·[4] S·52KiB[52KiB] Sc·[1.00]
+21:51:29.853224 db@janitor F·6 G·0
+21:51:29.853758 db@open done T·41.1928ms
+21:51:29.853887 table@compaction L0·4 -> L1·0 S·52KiB Q·638
+21:51:29.869601 db@close closing
+21:51:29.886106 table@build created L1@14 N·631 S·51KiB "\x02d\xfc..\x19Ba,v436":"\xfe\x88\xcf..H\xef\xcc,v369"
+21:51:29.886919 table@build exiting
+21:51:29.887617 table@build revert @14
+21:51:29.889578 db@close done T·19.9789ms
+=============== Apr 10, 2021 (UTC) ===============
+21:51:30.862218 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+21:51:30.873931 version@stat F·[4] S·52KiB[52KiB] Sc·[1.00]
+21:51:30.874539 db@open opening
+21:51:30.875463 journal@recovery F·1
+21:51:30.876318 journal@recovery recovering @12
+21:51:30.883158 memdb@flush created L0@14 N·1 S·398B "eth..э\x92,v639":"eth..э\x92,v639"
+21:51:30.885780 version@stat F·[5] S·53KiB[53KiB] Sc·[1.25]
+21:51:30.908447 db@janitor F·7 G·0
+21:51:30.908977 db@open done T·33.739ms
+21:51:30.909099 table@compaction L0·5 -> L1·0 S·53KiB Q·640
+21:51:30.924376 db@close closing
+21:51:30.945030 table@build created L1@17 N·631 S·51KiB "\x02d\xfc..\x19Ba,v436":"\xfe\x88\xcf..H\xef\xcc,v369"
+21:51:30.945562 table@build exiting
+21:51:30.946165 table@build revert @17
+21:51:30.948245 db@close done T·23.8418ms
+=============== Apr 10, 2021 (UTC) ===============
+21:51:48.460369 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+21:51:48.469455 version@stat F·[5] S·53KiB[53KiB] Sc·[1.25]
+21:51:48.471624 db@open opening
+21:51:48.472669 journal@recovery F·1
+21:51:48.474541 journal@recovery recovering @15
+21:51:48.482584 memdb@flush created L0@17 N·1 S·398B "eth..э\x92,v641":"eth..э\x92,v641"
+21:51:48.488810 version@stat F·[6] S·53KiB[53KiB] Sc·[1.50]
+21:51:48.504370 db@janitor F·8 G·0
+21:51:48.505057 db@open done T·32.6214ms
+21:51:48.505212 table@compaction L0·6 -> L1·0 S·53KiB Q·642
+21:51:48.519874 db@close closing
+21:51:48.536907 table@build created L1@20 N·631 S·51KiB "\x02d\xfc..\x19Ba,v436":"\xfe\x88\xcf..H\xef\xcc,v369"
+21:51:48.537691 table@build exiting
+21:51:48.538505 table@build revert @20
+21:51:48.540081 db@close done T·20.2089ms
+=============== Apr 10, 2021 (UTC) ===============
+21:54:15.760368 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+21:54:15.766931 version@stat F·[6] S·53KiB[53KiB] Sc·[1.50]
+21:54:15.768050 db@open opening
+21:54:15.769161 journal@recovery F·1
+21:54:15.770844 journal@recovery recovering @18
+21:54:15.782377 memdb@flush created L0@20 N·1 S·398B "eth..э\x92,v643":"eth..э\x92,v643"
+21:54:15.787009 version@stat F·[7] S·53KiB[53KiB] Sc·[1.75]
+21:54:15.805290 db@janitor F·9 G·0
+21:54:15.806000 db@open done T·37.1261ms
+21:54:15.806193 table@compaction L0·7 -> L1·0 S·53KiB Q·644
+21:54:15.831844 db@close closing
+21:54:15.846085 table@build created L1@23 N·631 S·51KiB "\x02d\xfc..\x19Ba,v436":"\xfe\x88\xcf..H\xef\xcc,v369"
+21:54:15.846940 table@build exiting
+21:54:15.847511 table@build revert @23
+21:54:15.849242 db@close done T·17.4303ms

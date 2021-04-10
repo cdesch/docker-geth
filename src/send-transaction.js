@@ -1,6 +1,8 @@
 // node  src/send-transaction.js
 
 const ethers = require("ethers");
+// const NETWORK_ADDRESS = "http://localhost:8545";
+const NETWORK_ADDRESS = "http://localhost:31118";
 async function main() {
   // Hardhat always runs the compile task when running scripts with its command
   // line interface.
@@ -19,7 +21,7 @@ const senderPrivateKey = "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae78
 
 // const senderPrivateKey = "0x348f40e0b3c3d55b626ec085c115fc25578a10a76b9afcd27d4c48094d707348";
 
-const provider = new ethers.providers.JsonRpcProvider("http://127.0.0.1:8545");
+const provider = new ethers.providers.JsonRpcProvider(NETWORK_ADDRESS);
 const blocknumber = await provider.getBlockNumber();
 console.log("blocknumber", blocknumber.toString());
 

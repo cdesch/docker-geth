@@ -4,7 +4,8 @@
   "description": "create directory",
   "main": "index.js",
   "scripts": {
-    "network-test": "node src/network-tester.js"
+    "network-test": "node src/network-tester.js",
+    "send-transaction": "node src/send-transaction.js"
   },
   "author": "",
   "license": "ISC",

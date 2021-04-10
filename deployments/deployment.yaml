@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: geth-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: geth
+  template:
+    metadata:
+      labels:
+        app: geth
+    spec:
+      containers:
+      - name: geth
+        image: ethereum/client-go
+        command: ['/bin/sh', '-c', '/opt/geth/config/entrypoint.sh']
+        # command: "geth --datadir /opt/geth --nodiscover --port 30303 --http --http.addr "0.0.0.0" --ipcpath /opt/geth/geth.ipc --miner.gasprice 0 --http.port 8545 --http.api eth,net,web3,admin,personal,miner --networkid 607227 --unlock 0x5240834dc33a997def6f2487159a572905a779fe --password /root/files/password --mine --allow-insecure-unlock  --miner.threads=2"
+        ports:
+        - name: rpc-endpoint
+          containerPort: 8545
+        - name: ws-endpoint
+          containerPort: 8546
+        volumeMounts:
+        - name: geth-datadir
+          mountPath: /opt/geth/node
+        - name: geth-config
+          mountPath: /opt/geth/config
+        - name: geth-secret
+          mountPath: /opt/geth/secret
+          readOnly: true
+      volumes:
+      - name: geth-datadir
+        persistentVolumeClaim:
+          claimName: geth-pv-claim
+      - name: geth-config
+        configMap:
+          name: geth-config
+          defaultMode: 0755
+      - name: geth-secret
+        secret:
+          secretName: geth-secret
