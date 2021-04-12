@@ -43,3 +43,24 @@ echo -n '0x5240834dc33a997def6f2487159a572905a779fe' | base64
 keystore_secret: |
     {"address":"5240834dc33a997def6f2487159a572905a779fe","crypto":{"cipher":"aes-128-ctr","ciphertext":"de143f536b58d1dec47742c860214f82e18ae28ad9ce8510691e5f6f6c2bfa0a","cipherparams":{"iv":"ba7371b55bd8ccac02b5534c62aa6357"},"kdf":"scrypt","kdfparams":{"dklen":32,"n":262144,"p":1,"r":8,"salt":"c2858e4dc5cff0c2fa6965736768fd15f1afcb73d5a6cb68491bae273e3db13e"},"mac":"973a0b728500802e361e928819af29468082f5ce30bf68cd1e993a5c8299833b"},"id":"1a15f94f-5bae-4c8e-8e42-b73e6338a8a0","version":3}
   
+docker ingress
+
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.45.0/deploy/static/provider/cloud/deploy.yaml
+https://kubernetes.github.io/ingress-nginx/deploy/#verify-installation
+
+kubectl delete -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.45.0/deploy/static/provider/cloud/deploy.yaml
+
+Alethio
+https://github.com/Alethio/ethereum-lite-explorer#with-memento
+
+
+   docker run -p 8080:80 -e APP_NODE_URL="http://192.168.1.180:31629" alethio/ethereum-lite-explorer
+
+memento
+https://alethio.gitbook.io/memento/running-memento/via-docker   
+
+kubectl apply -f meme
+kubectl delete -f meme
+
+
+docker run --name memento -d -v /Users/cj1/projects/docker-geth/memento:/config/ -p 3000:3000 -p 3001:3001 alethio/memento:latest

@@ -2,7 +2,11 @@
 
 const ethers = require("ethers");
 // const NETWORK_ADDRESS = "http://localhost:8545";
-const NETWORK_ADDRESS = "http://localhost:31118";
+// const NETWORK_ADDRESS = "http://localhost:31118";
+// const NETWORK_ADDRESS = "http://localhost:31629";
+const NETWORK_ADDRESS = "http://192.168.1.180:31629";
+
+
 async function main() {
   // Hardhat always runs the compile task when running scripts with its command
   // line interface.

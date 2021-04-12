@@ -106,3 +106,20 @@
 21:54:15.846940 table@build exiting
 21:54:15.847511 table@build revert @23
 21:54:15.849242 db@close done T·17.4303ms
+=============== Apr 11, 2021 (UTC) ===============
+14:24:36.931209 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:24:36.940299 version@stat F·[7] S·53KiB[53KiB] Sc·[1.75]
+14:24:36.941485 db@open opening
+14:24:36.942754 journal@recovery F·1
+14:24:36.943605 journal@recovery recovering @21
+14:24:36.955749 memdb@flush created L0@23 N·1 S·398B "eth..э\x92,v645":"eth..э\x92,v645"
+14:24:36.960820 version@stat F·[8] S·54KiB[54KiB] Sc·[2.00]
+14:24:36.984363 db@janitor F·10 G·0
+14:24:36.985262 db@open done T·42.6394ms
+14:24:36.985422 table@compaction L0·8 -> L1·0 S·54KiB Q·646
+14:24:37.010167 db@close closing
+14:24:37.026594 table@build created L1@26 N·631 S·51KiB "\x02d\xfc..\x19Ba,v436":"\xfe\x88\xcf..H\xef\xcc,v369"
+14:24:37.027245 table@build exiting
+14:24:37.028005 table@build revert @26
+14:24:37.029979 db@write was delayed N·1 T·1.6867ms
+14:24:37.032095 db@close done T·21.9277ms
