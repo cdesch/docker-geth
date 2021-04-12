@@ -7,11 +7,16 @@ data:
   coinbase_id: "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266"
   validator_id: "0x5240834dc33a997def6f2487159a572905a779fe"
   password: "password"
+  private_key: |-
+    {"address":"5240834dc33a997def6f2487159a572905a779fe","crypto":{"cipher":"aes-128-ctr","ciphertext":"de143f536b58d1dec47742c860214f82e18ae28ad9ce8510691e5f6f6c2bfa0a","cipherparams":{"iv":"ba7371b55bd8ccac02b5534c62aa6357"},"kdf":"scrypt","kdfparams":{"dklen":32,"n":262144,"p":1,"r":8,"salt":"c2858e4dc5cff0c2fa6965736768fd15f1afcb73d5a6cb68491bae273e3db13e"},"mac":"973a0b728500802e361e928819af29468082f5ce30bf68cd1e993a5c8299833b"},"id":"1a15f94f-5bae-4c8e-8e42-b73e6338a8a0","version":3}
+
   entrypoint.sh: |-
     #!/bin/sh
     set -ex
     geth --datadir /opt/geth/node init /opt/geth/config/genesis.json
+    cp /opt/geth/config/private_key /opt/geth/node/keystore/UTC--2021-04-09T14-44-43.694304000Z--5240834dc33a997def6f2487159a572905a779fe
     geth --datadir /opt/geth/node --nodiscover --port 30303 --http --http.addr "0.0.0.0" --ipcpath /opt/geth/geth.ipc --miner.gasprice 0 --http.port 8545 --http.api eth,net,web3,admin,personal,miner --networkid 607227 --unlock 0x5240834dc33a997def6f2487159a572905a779fe  --password /opt/geth/secret/password --mine --allow-insecure-unlock  --miner.threads=2
+    
   genesis.json: |-
     {
       "config": {

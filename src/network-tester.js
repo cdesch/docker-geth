@@ -1,7 +1,7 @@
 const Web3 = require("web3");
 
 // const NETWORK_ADDRESS = "http://localhost:8545";
-const NETWORK_ADDRESS = "http://localhost:31629";
+const NETWORK_ADDRESS = "http://localhost:30356";
 
 const web3 = new Web3(new Web3.providers.HttpProvider(NETWORK_ADDRESS));
 
