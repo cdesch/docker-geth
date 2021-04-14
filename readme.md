@@ -66,3 +66,14 @@ kubectl delete -f meme
 
 
 docker run --name memento -d -v /Users/cj1/projects/docker-geth/memento:/config/ -p 3000:3000 -p 3001:3001 alethio/memento:latest
+
+https://github.com/Alethio/memento
+redis https://www.callicoder.com/deploy-multi-container-go-redis-app-kubernetes/
+
+
+kubectl apply -f memento2
+
+psql -h 192.168.1.180 -d memento -U memento -W admin123 -p 31167
+
+
+redis-cli -h 192.168.1.180 -p 30379

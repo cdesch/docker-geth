@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: memento
+  labels:
+    app: memento
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: memento
+  template:
+    metadata:
+      labels:
+        app: memento
+    spec:
+      containers:
+        - name: memento
+          image: alethio/memento:latest
+          imagePullPolicy: Always
+          env:
+          - name: PG_PASSWORD
+            value: admin123
+          ports:
+          - name: dashboard
+            containerPort: 3000
+          - name: explorer
+            containerPort: 3001
+          volumeMounts:
+          - name: config
+            mountPath: /config
+      volumes:
+      - name: config
+        configMap:
+          name: memento-config
+         

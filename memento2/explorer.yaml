@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lite-explorer
+  labels:
+    app: lite-explorer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lite-explorer
+  template:
+    metadata:
+      labels:
+        app: lite-explorer
+    spec:
+      containers:
+        - name: lite-explorer
+          image: alethio/ethereum-lite-explorer
+          imagePullPolicy: Always
+          ports:
+          - name: http
+            containerPort: 80
+          volumeMounts:
+          - name: config
+            mountPath: /usr/share/nginx/html/config.json
+            subPath: config.json
+      volumes:
+        - name: config
+          configMap:
+            name: explorer-config
+          
